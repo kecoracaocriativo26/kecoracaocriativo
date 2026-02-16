@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ke Coração Criativo | Brindes</title>
     
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1169/1169905.png?v=2">
+    <link rel="icon" type="image/png" href="https://fonts.gstatic.com/s/i/short-term/release/googlestylesheet/gift/default/24px.svg">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
+        /* CSS OTIMIZADO PARA VELOCIDADE NO CELULAR */
         body {
             background-image: url('meu-fundo.jpg'); 
             background-size: cover;
@@ -22,13 +23,21 @@
             overflow-x: hidden;
         }
 
+        /* Melhora o clique no celular para não travar */
         .btn {
-            transition: transform 0.2s ease;
+            transition: transform 0.1s ease;
             -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
         }
 
         .btn:active {
-            transform: scale(0.95);
+            transform: scale(0.96);
+        }
+
+        /* Garante que a logo esteja limpa */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
         }
     </style>
     <link rel="stylesheet" href="style.css">
