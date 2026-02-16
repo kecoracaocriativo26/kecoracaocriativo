@@ -48,7 +48,7 @@ body {
 
 .main-card {
     background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.7)), 
-                url('fundosite.pn'); 
+                url('fundosite.png'); 
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(10px);
