@@ -3,37 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ke Coração Criativo | Brindes</title>
-    
+    <title>Ke Coração Criativo</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="decoracao-container">
-        <i class="fas fa-gift"></i>
-        <i class="fas fa-heart"></i>
-        <i class="fas fa-box-open"></i>
-        <i class="fas fa-star"></i>
-    </div>
+    <div id="chuva-container"></div>
 
     <main class="main-card">
-        <header class="header">
+        <header>
             <h1 class="brand-ke">KE</h1>
-            <h2 class="main-title">CORAÇÃO</h2>
+            <h2 class="main-title">CORAÇÃO <span class="emoji-inline">❤️</span></h2>
             <p class="highlight-subtitle">CRIATIVO</p>
         </header>
 
         <div class="links-container">
-            <a href="https://wa.me/554991439222?text=Olá! Gostaria de fazer um orçamento!" target="_blank" class="btn btn-whats">
-                <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
+            <a href="https://wa.me/554991439222" target="_blank" class="btn-luxury">
+                <div class="icon-circle icon-whats">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
                 <span>Nosso WhatsApp</span>
             </a>
 
-            <a href="https://www.instagram.com/detalhesqueencantamke" target="_blank" class="btn btn-instagram">
-                <div class="icon-box"><i class="fab fa-instagram"></i></div>
+            <a href="https://www.instagram.com/detalhesqueencantamke" target="_blank" class="btn-luxury">
+                <div class="icon-circle icon-insta">
+                    <i class="fab fa-instagram"></i>
+                </div>
                 <span>Nosso Instagram</span>
             </a>
         </div>
@@ -42,5 +39,32 @@
             <p>PERSONALIZADOS</p>
         </footer>
     </main>
+
+    <script>
+        function criarChuva() {
+            const container = document.getElementById('chuva-container');
+            const itens = [
+                { icon: 'fa-gift', cor: '#D00000' },
+                { icon: 'fa-mug-hot', cor: '#F5F5F5' },
+                { icon: 'fa-cookie', cor: '#3E2723' },
+                { icon: 'fa-heart', cor: '#FF0050' }
+            ];
+
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const obj = itens[Math.floor(Math.random() * itens.length)];
+                    const el = document.createElement('i');
+                    el.className = `fas ${obj.icon} item-queda`;
+                    el.style.left = Math.random() * 100 + 'vw';
+                    el.style.color = obj.cor;
+                    el.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                    el.style.animationDuration = (Math.random() * 2 + 2.5) + 's';
+                    container.appendChild(el);
+                    setTimeout(() => el.remove(), 4500);
+                }, i * 100);
+            }
+        }
+        window.onload = criarChuva;
+    </script>
 </body>
 </html>
