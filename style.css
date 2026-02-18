@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* FUNDO ROSA ANIMADO (Seta de baixo da sua imagem) */
+    
     background: linear-gradient(-45deg, #ff69b4, #da1b81, #ff1493, #8a0b52);
     background-size: 400% 400%;
     animation: gradienteFundo 12s ease infinite;
@@ -39,7 +39,7 @@ body {
 }
 
 .main-card {
-    /* CARTÃO EM ROSA ESCURO (Seta de cima da sua imagem) */
+  
     background: linear-gradient(rgba(139, 10, 80, 0.6), rgba(189, 12, 144, 0.8)), 
                 url('fundosite.png'); 
     background-size: cover;
@@ -57,7 +57,7 @@ body {
     animation: entradaCard 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* REMOVE A XÍCARA OU QUALQUER ÍCONE ANTES DO NOME */
+
 .brand-ke::before, .header::before {
     content: none !important;
     display: none !important;
@@ -96,7 +96,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: 0.3s;
     text-decoration: none;
-    /* MELHORA O CLIQUE NO CELULAR (SEM GARGALO) */
+    
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
 }
