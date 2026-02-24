@@ -1,6 +1,6 @@
 const CONFIG = {
     whatsappNumber: "+55 49 9143-9222",
-    instagramUser: "https://www.instagram.com/detalhesqueencantamke?igsh=MXY5ZXp3OWoyam9jaw%3D%3D&utm_source=qr", 
+    instagramUser: "https://www.instagram.com/ke_coracao_criativo/", 
     whatsappMessage: "Olá! Gostaria de fazer um orçamento!"
 };
 
